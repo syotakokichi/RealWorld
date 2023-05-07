@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # パスワード情報を保存するファイル名
-password_file="passwords.txt"
+password_file="passwords_step1.txt"
 
 # 挨拶メッセージ
 echo "パスワードマネージャーへようこそ！"
