@@ -13,14 +13,14 @@
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| チャンネルID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | チャンネル名 | varchar(100) |  |  |  |  |
 
 ### テーブル：番組枠
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| 番組枠ID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | チャンネルID | bigint(20) |  | INDEX |  |  |
 | 時間帯 | varchar(100) |  |  |  |  |
 - 外部キー制約：チャンネルID に対して、チャンネル テーブルの チャンネルID カラムから設定
@@ -29,7 +29,7 @@
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| 番組ID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | タイトル | varchar(255) |  |  |  |  |
 | 番組詳細 | text | YES |  |  |  |
 
@@ -37,14 +37,14 @@
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| ジャンルID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | ジャンル名 | varchar(255) |  |  |  |  |
 
 ### テーブル：番組ジャンル
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| 番組ジャンルID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | 番組ID | bigint(20) |  |  |  |  |
 | ジャンルID | bigint(20) |  |  |  |  |
 - 外部キー制約：番組ID に対して、番組 テーブルの番組ID カラムから設定
@@ -55,7 +55,7 @@
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| シーズンID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | 番組ID | bigint(20) |  | INDEX |  |  |
 | シーズン数 | int(11) | YES |  |  |  |
 - 外部キー制約：番組ID に対して、番組 テーブルの 番組ID カラムから設定
@@ -64,7 +64,7 @@
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| エピソードID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | シーズンID | bigint(20) |  | INDEX |  |  |
 | エピソード数 | int(11) | YES |  |  |  |
 | タイトル | varchar(255) |  |  |  |  |
@@ -77,7 +77,7 @@
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| 視聴数ID | bigint(20) |  | PRIMARY |  | YES |
+| ID | bigint(20) |  | PRIMARY |  | YES |
 | 番組枠ID | bigint(20) |  | INDEX |  |  |
 | エピソードID | bigint(20) |  | INDEX |  |  |
 | 視聴数 | bigint(20) |  |  | 0 |  |
