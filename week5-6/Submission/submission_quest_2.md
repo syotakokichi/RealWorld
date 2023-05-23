@@ -51,10 +51,10 @@ CREATE TABLE ViewCount (
     EpisodeID INT,
     FOREIGN KEY (EpisodeID) REFERENCES Episode(EpisodeID)
 );
-'''
+```
 
 3. データを挿入
-'''sql
+```sql
 INSERT INTO Channel (Name)
 VALUES ('Drama'), ('Comedy'), ('News');
 
@@ -88,3 +88,4 @@ VALUES (1000, '2023-05-21', 1),
        (950, '2023-05-21', 4),
        (1100, '2023-05-21', 5),
        (900, '2023-05-21', 6);
+ ```
