@@ -44,7 +44,7 @@
 
 | カラム名 | データ型 | NULL | キー | 初期値 | AUTO INCREMENT |
 | --- | --- | --- | --- | --- | --- |
-| 番組ジャンルID | bigint(20) |  | PRIMARY |  |  |
+| 番組ジャンルID | bigint(20) |  | PRIMARY |  | YES |
 | 番組ID | bigint(20) |  |  |  |  |
 | ジャンルID | bigint(20) |  |  |  |  |
 - 外部キー制約：番組ID に対して、番組 テーブルの番組ID カラムから設定
