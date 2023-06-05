@@ -1,0 +1,154 @@
+img {
+  width: 150px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.header-top ul {
+  color: #0d98ba;  /* ブルーグリーン */
+}
+
+.header-top ul li {
+  cursor: pointer;
+}
+
+.menu {
+  background-color: #0d98ba;
+  color: white;
+  font-weight: bold;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.menu li {
+  padding: 0 10px;
+}
+
+h4 {
+  text-align: left;
+}
+
+
+main {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  color: #0d98ba;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.form-field {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-field h3 {
+  font-weight: bold;
+  color: black;
+}
+
+.form-field h3 span {
+  color: red;
+}
+
+
+main button {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 20px auto;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+main button:first-child {
+  border: 2px solid #008000;  /* 緑 */
+  color: #008000;
+}
+
+main button:nth-child(2) {
+  background-color: #0d98ba;
+  color: white;
+}
+
+main div:last-child button:first-child {
+  background-color: #0d98ba;
+  color: white;
+}
+
+main div:last-child button:last-child {
+  background-color: gray;
+  color: white;
+}
+
+
+footer {
+  background-color: #d3d3d3;  /* グレー */
+  color: black;  /* テキストは黒でなければならない */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;  /* 縦方向に配置します */
+  align-items: center;
+}
+
+footer h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;  /* 項目が多いため、必要に応じて折り返します */
+  justify-content: center;  /* 項目を中心に配置します */
+}
+
+footer ul li {
+  margin: 0 5px;  /* 項目間にスペースを追加します */
+}
+
+footer ul li:not(:last-child)::after {
+  content: "|";  /* 項目間にパイプを追加します */
+  margin-left: 5px;
+}
+
+footer .footer-bottom {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;  /* 上部との間にスペースを追加します */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;  /* 項目を均等に分散します */
+  padding: 10px 0;  /* 上下のパディングを追加します */
+}

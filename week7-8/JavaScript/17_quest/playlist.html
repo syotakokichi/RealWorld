@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playlist Example</title>
+  </head>
+  <body>
+    <h1>Playlist Example</h1>
+    <script type="text/javascript">
+      class Playlist {
+        constructor(name) {
+          this.name = name;
+          this.songs = [];
+          this.currentSongIndex = 0;
+        }
+
+        addSong(song) {
+          this.songs.push(song);
+        }
+
+        removeSong(song) {
+          let index = this.songs.indexOf(song);
+          if(index > -1) {
+            this.songs.splice(index, 1);
+            if (this.currentSongIndex > index) {
+              this.currentSongIndex--;
+            } else if (this.currentSongIndex === index && this.currentSongIndex === this.songs.length) {
+              this.currentSongIndex--;
+            }
+          } else {
+            console.log(`${song} is not in the playlist.`);
+          }
+        }
+
+        play() {
+          if (this.songs.length > 0) {
+            return `再生中: ${this.songs[this.currentSongIndex]}`;
+          } else {
+            return 'プレイリストは空です';
+          }
+        }
+      }
+
+      // プレイリストの作成と操作の例
+      let myPlaylist = new Playlist('お気に入りリスト');
+      myPlaylist.addSong('Lemon');
+      myPlaylist.addSong('花束');
+      console.log(myPlaylist.play()); // 再生中: Lemon
+      myPlaylist.removeSong('Lemon');
+      console.log(myPlaylist.play()); // 再生中：花束
+    </script>
+  </body>
+</html>

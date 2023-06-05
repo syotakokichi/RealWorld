@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+img {
+  width: 150px;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  color: #0d98ba;  /* ブルーグリーン */
+}
+
+header ul li {
+  cursor: pointer;
+}
+
+header ul:nth-child(2) {
+  background-color: #0d98ba;
+  color: white;
+  font-weight: bold;
+  gap: 20px;
+}
+
+h4 {
+  text-align: left;
+}
+
+main {
+  margin-top: 20px;
+}
+
+main h1 {
+  color: #0d98ba;
+  font-weight: bold;
+}
+
+main h3 {
+  font-weight: bold;
+}
+
+main h3:contains("※必須") {
+  color: red;
+}
+
+main button {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+main button:nth-child(1) {
+  border: 2px solid #008000;  /* 緑 */
+  color: #008000;
+}
+
+main button:nth-child(2) {
+  background-color: #0d98ba;
+  color: white;
+}
+
+main button:nth-child(3) {
+  background-color: gray;
+  color: white;
+}
+
+footer {
+  background-color: #d3d3d3;  /* グレー */
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer div:last-child {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
