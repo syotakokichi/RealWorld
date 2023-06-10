@@ -1,0 +1,15 @@
+ルーティングの設定
+/todos に GET されると、TODO の一覧を表示するページ（以下、TODO 一覧ページ）を表示するようにルーティングを設定してください。
+また、トップページにアクセスしたときも TODO 一覧ページを表示するようにしてください。
+
+ルーティングを設定します。config/routes.rb ファイルを以下のように編集します。
+
+ruby
+Copy code
+Rails.application.routes.draw do
+  root to: 'todos#index'
+  resources :todos
+end
+
+以上で、テーブルの作成、モデルの生成、ルーティングの設定が完了しました。
+次に、todosコントローラとビューを作成し、それぞれのアクションを実装していきます。

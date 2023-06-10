@@ -1,0 +1,65 @@
+バリデーション
+TODO のタイトルが空の場合は、タスクを追加できないようにバリデーションを設定してください。またタイトルが空のまま保存しようとした場合、「タスクのタイトルを入力してください」というバリデーションエラーメッセージを TODO の新規作成ページ上に表示してください。
+
+
+バリデーションを設定するためには、まず `Todo` モデルに次のような行を追加します：
+
+```ruby
+class Todo < ApplicationRecord
+  validates :title, presence: true
+end
+```
+
+上記のコードは、`title` 属性が空ではないことを保証します。もし `title` が空であれば、`Todo` の保存が失敗します。
+
+
+次に、`todos` コントローラの `create` アクションを以下のように更新して、バリデーションエラーのメッセージを扱えるようにします：
+
+```ruby
+def create
+  @todo = Todo.new(todo_params)
+
+  if @todo.save
+    redirect_to @todo, notice: 'タスクが正常に作成されました'
+  else
+    render :new
+  end
+end
+```
+
+この更新により、`Todo` の保存が失敗した場合（バリデーションエラーが発生した場合）、新規作成ページが再度表示されます。
+
+最後に、新規作成ページ（通常は `app/views/todos/new.html.erb`）を以下のように更新して、バリデーションエラーメッセージを表示します：
+
+```erb
+<% if @todo.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+    <ul>
+    <% @todo.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: @todo do |form| %>
+  <!-- ここにフォームの内容を記述します -->
+<% end %>
+```
+
+上記のコードにより、バリデーションエラーがある場合、それらのエラーメッセージがリスト形式で表示されます。これらの変更により、タスクのタイトルが空の場合に「タスクのタイトルを入力してください」というエラーメッセージが表示されるようになります。
+
+なお、上記のエラーメッセージの内容は `config/locales/*.yml` ファイルを更新することでカスタマイズすることが可能です。具体的には、`config/locales/ja.yml` ファイルを以下のように更新すると、「タスクのタイトルを入力してください」というメッセージが表示されます：
+
+```yaml
+ja:
+  activerecord:
+    errors:
+      models:
+        todo:
+          attributes:
+            title:
+              blank: "タスクのタイトルを入力してください"
+```
