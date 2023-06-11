@@ -8,15 +8,19 @@ img {
   align-items: center;
 }
 
+
 header ul {
   list-style: none;
   padding: 0;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 
 .header-top ul {
-  color: #0d98ba;  /* ブルーグリーン */
+  color: #76bcbd; 
+  /* 項目間にパイプを追加します */
+
 }
 
 .header-top ul li {
@@ -24,7 +28,7 @@ header ul {
 }
 
 .menu {
-  background-color: #0d98ba;
+  background-color: #76bcbd;
   color: white;
   font-weight: bold;
   gap: 20px;
@@ -34,39 +38,47 @@ header ul {
 }
 
 .menu li {
-  padding: 0 10px;
+  padding: 0 30px;
+}
+
+.menu li:hover {
+  background-color: #66a6a9;
 }
 
 h4 {
-  text-align: left;
+  padding: 0px 0 0 100px;
+  font-weight: normal;
+  color:#5d5d5d;
 }
 
 
 main {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "游ゴシック体";
 }
 
 main h1 {
-  color: #0d98ba;
-  font-weight: bold;
+  color: #76bcbd;
   text-align: center;
+  font-weight: normal;
+  height: 60px;
 }
 
 .form-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin:0 25%;
 }
 
 .form-field {
-  width: 45%;
+  width: 49%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 20px;
+  box-sizing: content-box;
 }
 
 .form-field h3 {
@@ -74,46 +86,92 @@ main h1 {
   color: black;
 }
 
-.form-field h3 span {
+.form-field:nth-child(5) {
+  width: 98%;
+}
+
+.form-field h3,
+.form-field input {
+  margin: 0;
+  padding: 0;
+}
+
+.form-field input {
+  padding: 10px 0;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.date {
+  font-weight:normal;
+}
+
+.required {
   color: red;
 }
 
+
+.memo {
+  display: grid;
+  box-sizing: border-box;
+  justify-content: center ; 
+}
+
+.memo h3 {
+  margin-bottom: 0; 
+  justify-self: start;
+  text-align: left;
+}
+
+.memo textarea {
+  width: 200%; 
+  padding: 5px 0 100px 5px; 
+  font-size: 18px;
+  margin: 0 0 50px 5px;
+  resize:vertical;
+}
 
 main button {
   display: block;
   width: 200px;
   height: 40px;
-  margin: 20px auto;
+  margin: 15px auto;
   border: none;
   cursor: pointer;
   text-align: center;
   font-size: 16px;
+  color: #76bcbd;
+  background-color: white;
 }
 
 main button:first-child {
-  border: 2px solid #008000;  /* 緑 */
-  color: #008000;
+  border: 2px solid #76bcbd; 
+  color: #76bcbd;
+  width:400px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 main button:nth-child(2) {
-  background-color: #0d98ba;
+  background-color: #76bcbd;
   color: white;
 }
 
 main div:last-child button:first-child {
-  background-color: #0d98ba;
+  background-color: #76bcbd;
   color: white;
 }
 
 main div:last-child button:last-child {
   background-color: gray;
   color: white;
+  width:400px;
 }
 
 
 footer {
-  background-color: #d3d3d3;  /* グレー */
-  color: black;  /* テキストは黒でなければならない */
+  background-color: gray;  /* グレー */
+  color: white;  /* テキストは黒でなければならない */
   padding: 20px;
   display: flex;
   flex-direction: column;  /* 縦方向に配置します */
@@ -142,13 +200,17 @@ footer ul li:not(:last-child)::after {
   margin-left: 5px;
 }
 
+footer ul li:hover {
+  color: blue;
+}
+
 footer .footer-bottom {
   background-color: black;
   color: white;
   font-weight: bold;
-  margin-top: 20px;  /* 上部との間にスペースを追加します */
+  margin-top: 30px;  /* 上部との間にスペースを追加します */
   width: 100%;
   display: flex;
   justify-content: space-around;  /* 項目を均等に分散します */
-  padding: 10px 0;  /* 上下のパディングを追加します */
+  padding: 20px 0;  
 }
