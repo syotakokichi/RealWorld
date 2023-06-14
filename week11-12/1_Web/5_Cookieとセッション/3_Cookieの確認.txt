@@ -1,0 +1,4 @@
+Cookie の確認
+ブラウザで Cookie を確認してみましょう。
+
+www.google.com にログインした状態でアクセスし、Cookie を確認してください。
