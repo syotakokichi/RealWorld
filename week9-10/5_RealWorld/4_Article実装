@@ -1,0 +1,10 @@
+次のエンドポイントを実装してください。
+
+Create Article
+Get Article
+Update Article
+Delete Article
+
+その際に、Postman のテストの該当する箇所が通るように実装してください。
+
+なお、Article に関わる要素のうち、タグ及びお気に入り(favorite) は実装しなくてよいものとします。Postman のテストからも該当箇所のコードは削除し除外してください。
