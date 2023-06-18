@@ -18,15 +18,15 @@ RealWorld の API のうち、次のエンドポイントを実装します。
 - [Delete Article](https://realworld-docs.netlify.app/docs/specs/backend-specs/endpoints#delete-article)
 
 なお、Article に関わる要素のうち、認証機能及び著者、タグ、お気に入り(`favorite`) は実装はしません。
-認証機能のない簡易バージョンの作成になります。
+<br>認証機能のない簡易バージョンの作成になります。
 
 ## Postmanを使ったテスト
 
-## 1. Create Article
+### 1. Create Article
 
-エンドポイント：`/api/articles`
-HTTPメソッド：POST (リソースの作成)
-リクエストボディ：
+- エンドポイント：`/api/articles`
+- HTTPメソッド：POST (リソースの作成)
+- リクエストボディ：
 
 ```json
 {
@@ -39,8 +39,8 @@ HTTPメソッド：POST (リソースの作成)
 }
 ```
 
-HTTPステータスコード：201 (Created)
-レスポンスボディ：
+- HTTPステータスコード：201 (Created)
+- レスポンスボディ：
 
 ```json
 {
@@ -54,13 +54,13 @@ HTTPステータスコード：201 (Created)
 }
 ```
 
-## 2. Get Article
+### 2. Get Article
 
-エンドポイント：`/api/articles/:slug`
-HTTPメソッド：GET (リソースの取得)
-リクエストボディ：なし
-HTTPステータスコード：200 (OK)
-レスポンスボディ：
+- エンドポイント：`/api/articles/:slug`
+- HTTPメソッド：GET (リソースの取得)
+- リクエストボディ：なし
+- HTTPステータスコード：200 (OK)
+- レスポンスボディ：
 
 ```json
 {
@@ -74,11 +74,11 @@ HTTPステータスコード：200 (OK)
 }
 ```
 
-## 3. Update Article
+### 3. Update Article
 
-エンドポイント：`/api/articles/:slug`
-HTTPメソッド：PUT (リソースの更新)
-リクエストボディ：
+- エンドポイント：`/api/articles/:slug`
+- HTTPメソッド：PUT (リソースの更新)
+- リクエストボディ：
 
 ```json
 {
@@ -88,8 +88,8 @@ HTTPメソッド：PUT (リソースの更新)
 }
 ```
 
-HTTPステータスコード：200 (OK)
-レスポンスボディ：
+- HTTPステータスコード：200 (OK)
+- レスポンスボディ：
 
 ```json
 {
@@ -103,10 +103,10 @@ HTTPステータスコード：200 (OK)
 }
 ```
 
-## 4. Delete Article
+### 4. Delete Article
 
-エンドポイント：`/api/articles/:slug`
-HTTPメソッド：DELETE (リソースの削除)
-リクエストボディ：なし
-HTTPステータスコード：204 (No Content)
-レスポンスボディ：なし
+- エンドポイント：`/api/articles/:slug`
+- HTTPメソッド：DELETE (リソースの削除)
+- リクエストボディ：なし
+- HTTPステータスコード：204 (No Content)
+- レスポンスボディ：なし
