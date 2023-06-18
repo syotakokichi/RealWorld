@@ -18,7 +18,7 @@ RealWorld の API のうち、次のエンドポイントを実装します。
 - [Delete Article](https://realworld-docs.netlify.app/docs/specs/backend-specs/endpoints#delete-article)
 
 なお、Article に関わる要素のうち、認証機能及び著者、タグ、お気に入り(`favorite`) は実装はしません。
-<br>認証機能のない簡易バージョンの作成になります。
+< br >認証機能のない簡易バージョンの作成になります。
 
 ## Postmanを使ったテスト
 
