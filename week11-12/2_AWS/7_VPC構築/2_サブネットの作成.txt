@@ -6,3 +6,10 @@
 WordPress はインターネットに接続されている必要があるため、パブリックサブネットを使用します。パブリックサブネットが2つ必要なのは、ウェブサーバーの可用性 (システムが継続して稼働できる能力) を高めるためです。Elastic Load Balancing を構築する際に2つ利用します。
 
 一方で、データベースはインターネットに接続されていなくても問題ないため、プライベートサブネットを使用します。プライベートサブネットが2つ必要なのは、データベースの可用性を高めるためです。RDS のサブネットグループを構築する際に2つ利用します。
+
+パブリックサブネット
+aws-and-infra-public-subnet-1a
+aws-and-infra-public-subnet-1a
+プライベートサブネット
+aws-and-infra-private-subnet-1a
+aws-and-infra-private-subnet-1a

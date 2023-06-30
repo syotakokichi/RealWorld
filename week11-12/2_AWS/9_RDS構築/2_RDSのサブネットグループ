@@ -1,5 +1,13 @@
 RDS のサブネットグループ
 RDS のサブネットグループを作成してください。サブネットグループを作成することで、作成する RDS を 作成した VPC 及びサブネットと紐付けることができます。
 
+aws-and-infra-subnet-group
+
 作成した VPC を選択してください
+
+aws-and-infra-vpc
+
 作成した2つのプライベートサブネットを割り当ててください
+
+aws-and-infra-private-subnet-1a
+aws-and-infra-private-subnet-1c
