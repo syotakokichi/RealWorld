@@ -1,5 +1,0 @@
-VPC の作成
-VPC を新規に作成してください。AWS 上で WordPress を動作させるためには、まず VPC を構築する必要があります。
-
-aws-and-infra-vpc
-で作成

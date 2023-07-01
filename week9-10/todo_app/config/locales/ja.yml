@@ -1,8 +1,0 @@
-ja:
-  activerecord:
-    errors:
-      models:
-        todo:
-          attributes:
-            title:
-              blank: "タスクのタイトルを入力してください"
